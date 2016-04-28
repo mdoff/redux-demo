@@ -9,11 +9,6 @@ import reducers from './reducers';
 import {addNote, removeNote, editNote} from './actions';
 
 const store = createStore(reducers, window.devToolsExtension ? window.devToolsExtension() : f => f);
-store.dispatch(addNote('test 1'));
-store.dispatch(addNote('test 2'));
-store.dispatch(addNote('test 3'));
-// store.dispatch(removeNote(1));
-store.dispatch(editNote(1, 'new test'))
 
 render(
   <Provider store={store}>
